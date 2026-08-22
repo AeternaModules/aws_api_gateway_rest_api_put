@@ -1,7 +1,3 @@
-output "api_gateway_rest_api_puts_id" {
-  description = "Map of id values across all api_gateway_rest_api_puts, keyed the same as var.api_gateway_rest_api_puts"
-  value       = { for k, v in aws_api_gateway_rest_api_put.api_gateway_rest_api_puts : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "api_gateway_rest_api_puts_body" {
   description = "Map of body values across all api_gateway_rest_api_puts, keyed the same as var.api_gateway_rest_api_puts"
   value       = { for k, v in aws_api_gateway_rest_api_put.api_gateway_rest_api_puts : k => v.body if v.body != null && length(v.body) > 0 }
